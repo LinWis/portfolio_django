@@ -1,0 +1,59 @@
+// main: ../style.less
+
+@import "../vars";
+
+.about {
+  margin: 8.4rem 0;
+}
+
+.about__inner {
+  display: flex;
+  max-width: 1090px;
+}
+
+.about__photo {
+  width: 50%;
+}
+
+.about__content {
+  width: 50%;
+  padding-left: 3.2rem;
+  margin-top: 2rem;
+}
+
+.about__title {
+  font-size: 3rem;
+  font-weight: 700;
+  color: @black;
+}
+
+.about__bigtitle {
+  font-size: 6.13rem;
+  font-weight: 700;
+  line-height: 1.1;
+  color: rgba(@black, .15);
+  margin-bottom: 1.4rem;
+
+  position: relative;
+  left: -10px;
+}
+
+.about__text {
+  font-size: 0.8rem;
+  font-weight: 300;
+  line-height: 2;
+  color: @grey;
+
+  margin-bottom: 2.8rem;
+}
+
+.about__photo {
+  border-radius: 30%;
+  background-color: rgba(@grey, .1);
+  padding: 7em 4.5rem;
+
+  img {
+    width: 430px;
+    height: 400px;
+  }
+}
