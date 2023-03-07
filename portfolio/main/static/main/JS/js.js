@@ -1,5 +1,7 @@
 $(function () {
 
+    const worksSlider = $('[data-slider="slick"]');
+
     let filter = $("[data-filter]");
     filter.on("click", function(event) {
         event.preventDefault();
@@ -40,6 +42,8 @@ $(function () {
 
         $("body").addClass("no-scroll");
 
+        worksSlider.slick('setPosition');
+
     });
 
     modalClose.on("click", function (event) {
@@ -64,6 +68,35 @@ $(function () {
 
         event.stopPropagation();
 
+    });
+
+    /*SLIDER: https://kenwheeler.github.io/slick/*/
+
+    worksSlider.slick({
+        infinite: true,
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        fade: true,
+        arrows: false,
+        dots: true,
+    });
+
+    $(".slickPrev").on("click", function (event) {
+        event.preventDefault();
+
+        let curSlider =
+            $(this).parents(".modal").find('[data-slider="slick"]');
+
+        curSlider.slick("slickPrev");
+    });
+
+    $(".slickNext").on("click", function (event) {
+        event.preventDefault();
+
+        let curSlider =
+            $(this).parents(".modal").find('[data-slider="slick"]');
+
+        curSlider.slick("slickNext");
     });
 
 });

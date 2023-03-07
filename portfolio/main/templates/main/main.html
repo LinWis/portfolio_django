@@ -222,7 +222,7 @@
     </section>
 
     <!-- Reviews -->
-    <div class="reviews">
+    <!--<div class="reviews">
         <div class="container">
 
             <div class="reviews__item">
@@ -245,10 +245,10 @@
             </div>
 
         </div>
-    </div>
+    </div>-->
 
     <!-- News -->
-    <section class="news">
+    <!--<section class="news">
         <div class="container">
 
             <div class="news__header">
@@ -352,7 +352,7 @@
             </div>
 
         </div>
-    </section>
+    </section>-->
 
     <!-- Footer -->
     <footer class="footer">
@@ -407,7 +407,14 @@
                 <div class="modal-work">
 
                     <div class="modal-work__previews">
-                        <img class="modal-work__photo" src="https://place-hold.it/790x780" alt="">
+                        <div data-slider="slick">
+                            <div class="">
+                                <img class="modal-work__photo" src="https://place-hold.it/790x780" alt="">
+                            </div>
+                            <div class="">
+                                <img class="modal-work__photo" src="https://place-hold.it/790x780/333" alt="">
+                            </div>
+                        </div>
                     </div>
 
                     <div class="modal-works__content">
@@ -431,8 +438,8 @@
                         </div>
 
                         <div class="modal-work__footer">
-                            <button class="modal-work__btn modal-work__btn--prev"><img src="{% static 'main/images/arrow.svg' %}" alt="" height="11">Previous</button>
-                            <button class="modal-work__btn modal-work__btn--next">Next<img height="11" src="{% static 'main/images/arrow.svg' %}" alt=""></button>
+                            <button class="modal-work__btn modal-work__btn--prev slickPrev"><img src="{% static 'main/images/arrow.svg' %}" alt="" height="11">Previous</button>
+                            <button class="modal-work__btn modal-work__btn--next slickNext">Next<img height="11" src="{% static 'main/images/arrow.svg' %}" alt=""></button>
                         </div>
 
                     </div>
@@ -658,6 +665,7 @@
     </div>
 
     <!-- JS -->
+    <script src="{% static 'main/JS/vendor/slick.min.js' %}"></script>
     <script src="{% static 'main/JS/js.js' %}"></script>
 
 </body>
