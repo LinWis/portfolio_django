@@ -105,7 +105,7 @@
 
                 <div class="portfolio__col" data-cat="app">
 
-                    <div class="portfolio__item" data-modal="#modal_project_1">
+                    <div class="portfolio__item" data-modal="#modal_project_2">
                         <img class="portfolio__image" src="{% static 'main/images/tg_weather.png' %}" alt="">
                         <div class="portfolio__item-content">
 
@@ -405,8 +405,18 @@
             </button>
 
                 <div class="modal-work">
-
+                    <script src="{% static 'main/JS/btnshow.js' %}"></script>
                     <div class="modal-work__previews">
+
+                        <div class="arrows_photo">
+                            <div class="arrow_left_photo">
+                                <img src="{% static 'main/images/arrow.svg' %}" alt="">
+                            </div>
+                            <div class="arrow_right_photo">
+                                <img src="{% static 'main/images/arrow.svg' %}" alt="">
+                            </div>
+                        </div>
+
                         <div data-slider="slick">
                             <div class="">
                                 <img class="modal-work__photo" src="https://place-hold.it/790x780" alt="">
@@ -415,6 +425,7 @@
                                 <img class="modal-work__photo" src="https://place-hold.it/790x780/333" alt="">
                             </div>
                         </div>
+
                     </div>
 
                     <div class="modal-works__content">
@@ -447,6 +458,68 @@
                 </div>
         </div>
     </div>
+
+    <div class="modal" id="modal_project_2" >
+    <div class="modal__dialog">
+
+        <button class="modal__close" type="button" data-close>
+            <img src="{% static 'main/images/cross.svg' %}" alt="Close">
+        </button>
+
+        <div class="modal-work">
+            <script src="{% static 'main/JS/btnshow.js' %}"></script>
+            <div class="modal-work__previews" onmouseover="btn_show()" onmouseout="btn_noShow()">
+
+                <div class="arrows_photo">
+                    <div class="arrow_left_photo" >
+                        <img src="{% static 'main/images/arrow.svg' %}" alt="">
+                    </div>
+                    <div class="arrow_right_photo">
+                        <img src="{% static 'main/images/arrow.svg' %}" alt="">
+                    </div>
+                </div>
+
+                <div data-slider="slick">
+                    <div class="">
+                        <img class="modal-work__photo" src="https://place-hold.it/790x780" alt="">
+                    </div>
+                    <div class="">
+                        <img class="modal-work__photo" src="https://place-hold.it/790x780/333" alt="">
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="modal-works__content">
+
+                <div class="modal-work__header">
+                    <h3 class="modal-work__title">Project title.</h3>
+                    <div class="modal-work__info">
+                        category <span class="modal-work__info-divider">|</span> 2018
+                    </div>
+                </div>
+
+                <div class="modal-works__client">
+                    <div class="modal-works__client-title">Client:</div>
+                    <div class="modal-works__client-company">Creative Agency</div>
+                </div>
+
+                <div class="modal-work__text">
+                    <p>Как вы уже поняли меня зовут Виктор, и я программист. Карьера программиста заинтересовала меня ещё в школе, где с 9 класса я начал принимать активное участие во всяческого рода олимпиадах по программированию и информатике в целом.</p>
+
+                    <p>Карьера программиста заинтересовала меня ещё в школе, где с 9 класса я начал принимать активное участие во всяческого рода олимпиадах по программированию и информатике в целом.</p>
+                </div>
+
+                <div class="modal-work__footer">
+                    <button class="modal-work__btn modal-work__btn--prev slickPrev"><img src="{% static 'main/images/arrow.svg' %}" alt="" height="11">Previous</button>
+                    <button class="modal-work__btn modal-work__btn--next slickNext">Next<img height="11" src="{% static 'main/images/arrow.svg' %}" alt=""></button>
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+</div>
 
     <div class="modal" id="modal_resume" >
         <div class="modal__dialog">
