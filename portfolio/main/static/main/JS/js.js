@@ -132,4 +132,15 @@ $(function () {
         $(".arrow_right_photo").css("display", "none");
     })
 
+    /*Mobile nav*/
+    const navToggle = $("#navToggle");
+    const nav = $("#nav")
+
+    navToggle.on("click", function (event) {
+        event.preventDefault();
+
+        nav.toggleClass("show")
+
+    });
+
 });

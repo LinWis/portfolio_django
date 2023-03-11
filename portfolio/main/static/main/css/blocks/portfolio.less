@@ -11,6 +11,14 @@
 .portfolio__col {
   flex-basis: 33.33333%;
   padding: 1rem;
+
+  @media @mobile {
+    flex-basis: 50%;
+  }
+
+  @media @mobile-sm {
+    flex-basis: 100%;
+  }
 }
 
 .portfolio__item {
@@ -22,6 +30,14 @@
 
   &:hover {
     box-shadow: 5px 5px 30px rgba(#000, .7);
+  }
+
+  @media @mobile {
+    max-width: 370px;
+  }
+
+  @media @mobile-sm {
+    margin: 0 auto;
   }
 
 }

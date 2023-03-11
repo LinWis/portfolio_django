@@ -1,11 +1,44 @@
 // main: ../style.less
+@import "../vars";
 
 .header {
   padding: 1.2rem;
+  position: relative;
+
+  @media @mobile {
+    background-color: #fff;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
+  }
 }
 
 .header__inner {
   display: flex;
   justify-content: space-between;
   align-items: center;
+}
+
+.burger {
+  width: 30px;
+  height: 30px;
+  padding: 0;
+  border: 0;
+  background: none;
+
+  display: none;
+
+  @media @mobile {
+    display: block;
+  }
+
+}
+
+.burger__icon {
+  display: block;
+  max-width: 100%;
+  height: auto;
 }

@@ -35,13 +35,17 @@
                     </div>
                 </div>
 
-                <nav class="nav">
+                <nav class="nav" id="nav">
                     <a class="nav__link" href="#">По работе</a>
                     <a class="nav__link" href="#">Обо мне</a>
                     <a class="nav__link" href="#">блог</a>
                     <a class="nav__link" href="#">Связь со мной</a>
                     <a class="nav__link nav__link--btn" href="#" data-modal="#modal_hire_me">Нанять меня</a>
                 </nav>
+
+                <button class="burger" type="button" id="navToggle">
+                    <img class="burger__icon" src="{% static 'main/images/menu-hamburger.svg' %}">
+                </button>
 
             </div>
         </div>
@@ -57,10 +61,10 @@
                     <div class="intro__text">Студент&amp;программист</div>
 
                     <div class="social">
-                        <a href="#" class="social_link"><img src="{% static 'main/images/vk.svg' %}" alt=""></a>
-                        <a href="#" class="social_link"><img src="{% static 'main/images/instagram.svg' %}" alt=""></a>
-                        <a href="#" class="social_link"><img src="{% static 'main/images/linkedin.svg' %}" alt=""></a>
-                        <a href="#" class="social_link"><img src="{% static 'main/images/telegram.svg' %}" alt=""></a>
+                        <a href="https://vk.com/progsy" class="social_link"><img src="{% static 'main/images/vk.svg' %}" alt=""></a>
+                        <a href="https://www.instagram.com/p/CVDrfywt-sD/?igshid=YmMyMTA2M2Y=" class="social_link"><img src="{% static 'main/images/instagram.svg' %}" alt=""></a>
+                        <a href="https://www.linkedin.com/mwlite/in/spring-logger-492963227" class="social_link"><img src="{% static 'main/images/linkedin.svg' %}" alt=""></a>
+                        <a href="https://t.me/freazeChest" class="social_link"><img src="{% static 'main/images/telegram.svg' %}" alt=""></a>
                     </div>
 
                     <a class="btn" href="#" data-modal="#modal_hire_me">Нанять меня</a>
@@ -85,17 +89,18 @@
                 <a href="#" class="works__nav__link" data-filter="interaction">Interaction</a>
             </div>
 
+            <!-- portfolio -->
             <div class="portfolio" id="portfolio">
 
                 <div class="portfolio__col" data-cat="app">
 
                     <div class="portfolio__item" data-modal="#modal_project_1">
-                        <img class="portfolio__image" src="{% static 'main/images/mylang2.png' %}" alt="">
+                        <img id="work_image_1" class="portfolio__image" src="{% static 'main/images/mylang_test.png' %}" alt="">
                         <div class="portfolio__item-content">
 
                             <div class="portfolio__cat">Hard Programming</div>
                             <div class="portfolio__title">
-                                Мой язык программирования
+                                Мой ЯП
                                 <time datetime="2022-02-10 23:00" class="portfolio__date">2022</time>
                             </div>
 
@@ -103,89 +108,26 @@
                     </div> <!-- portfolio__item -->
                 </div>
 
-                <div class="portfolio__col" data-cat="app">
 
-                    <div class="portfolio__item" data-modal="#modal_project_2">
-                        <img class="portfolio__image" src="{% static 'main/images/tg_weather.png' %}" alt="">
-                        <div class="portfolio__item-content">
+                <!-- <div class="portfolio__col" data-cat="app">
 
-                            <div class="portfolio__cat">Python</div>
-                            <div class="portfolio__title">
-                                Телеграмм бот
-                                <time datetime="2022-02-10 23:00" class="portfolio__date">2022</time>
-                            </div>
+                     <div class="portfolio__item" data-modal="#modal_project_2">
+                         <img class="portfolio__image" src="{% static 'main/images/tg_weather.png' %}" alt="">
+                         <div class="portfolio__item-content">
 
-                        </div> <!-- portfolio__content -->
-                    </div> <!-- portfolio__item -->
-                </div>
+                             <div class="portfolio__cat">Python</div>
+                             <div class="portfolio__title">
+                                 Телеграмм бот
+                                 <time datetime="2022-02-10 23:00" class="portfolio__date">2022</time>
+                             </div>
 
-                <div class="portfolio__col" data-cat="app">
+                         </div>
+                     </div>
+                 </div>
+                 -->
 
-                    <div class="portfolio__item" data-modal="#modal_project_1">
-                        <img class="portfolio__image"
-                             src="{% static 'main/images/calc.png' %}" alt="">
-                        <div class="portfolio__item-content">
+            </div>
 
-                            <div class="portfolio__cat">Python</div>
-                            <div class="portfolio__title">
-                                Калькулятор на QT
-                                <time datetime="2021-08-15 20:00"
-                                      class="portfolio__date">2021</time>
-                            </div>
-
-                        </div> <!-- portfolio__content -->
-                    </div> <!-- portfolio__item -->
-                </div>
-
-                <div class="portfolio__col" data-cat="website">
-
-                    <div class="portfolio__item" data-modal="#modal_project_1">
-                        <img class="portfolio__image" src="{% static 'main/images/parser.png' %}" alt="">
-                        <div class="portfolio__item-content">
-
-                            <div class="portfolio__cat">Python</div>
-                            <div class="portfolio__title">
-                                Парсер сайтов
-                                <time datetime="2022-02-10 23:00" class="portfolio__date">2021</time>
-                            </div>
-
-                        </div> <!-- portfolio__content -->
-                    </div> <!-- portfolio__item -->
-                </div>
-
-                <div class="portfolio__col" data-cat="app">
-
-                    <div class="portfolio__item" data-modal="#modal_project_1">
-                        <img class="portfolio__image" src="{% static 'main/images/trigger.png' %}" alt="">
-                        <div class="portfolio__item-content">
-
-                            <div class="portfolio__cat">Hard Programming</div>
-                            <div class="portfolio__title">
-                                Trigger Bot
-                                <time datetime="2022-02-10 23:00" class="portfolio__date">2021</time>
-                            </div>
-
-                        </div> <!-- portfolio__content -->
-                    </div> <!-- portfolio__item -->
-                </div>
-
-                <div class="portfolio__col" data-cat="app">
-
-                    <div class="portfolio__item" data-modal="#modal_project_1">
-                        <img class="portfolio__image" src="{% static 'main/images/tread.png' %}" alt="">
-                        <div class="portfolio__item-content">
-
-                            <div class="portfolio__cat">Hard Programming</div>
-                            <div class="portfolio__title">
-                                Работа с потоками
-                                <time datetime="2022-02-10 23:00" class="portfolio__date">2021</time>
-                            </div>
-
-                        </div> <!-- portfolio__content -->
-                    </div> <!-- portfolio__item -->
-                </div>
-
-            </div> <!-- portfolio -->
             <div class="text-center">
                 <a class="btn  btn--sm" href="#">ЗАЗГРУЗИТЬ БОЛЬШЕ</a>
             </div>
@@ -200,7 +142,7 @@
             <div class="about__inner">
 
                 <div class="about__photo">
-                    <!--<img src="images/4var.png" alt="">-->
+                    <img src="{% static 'main/images/me_full.png' %}" alt="">
                 </div>
 
                 <div class="about__content">
@@ -367,16 +309,16 @@
                     </div>
 
                     <div class="footer__social">
-                        <a href="#" target="_blank">
+                        <a href="https://www.linkedin.com/mwlite/in/spring-logger-492963227" target="_blank">
                             <img src="{% static 'main/images/linkedin_white.svg' %}" alt="" width="22">
                         </a>
-                        <a href="#" target="_blank">
+                        <a href="https://www.instagram.com/p/CVDrfywt-sD/?igshid=YmMyMTA2M2Y=" target="_blank">
                             <img src="{% static 'main/images/instagram_white.svg' %}" alt="" width="18">
                         </a>
-                        <a href="#" target="_blank">
+                        <a href="https://t.me/freazeChest" target="_blank">
                             <img src="{% static 'main/images/telegram_white.svg' %}" alt="" width="23">
                         </a>
-                        <a href="#" target="_blank">
+                        <a href="https://vk.com/progsy" target="_blank">
                             <img src="{% static 'main/images/vk_white.svg' %}" alt="" width="18">
                         </a>
                     </div>
@@ -419,10 +361,13 @@
 
                         <div data-slider="slick">
                             <div class="">
-                                <img class="modal-work__photo" src="https://place-hold.it/790x780" alt="">
+                                <img class="modal-work__photo work_image_1--modal" src="{% static 'main/images/mylang_test2.png' %}" alt="">
                             </div>
                             <div class="">
-                                <img class="modal-work__photo" src="https://place-hold.it/790x780/333" alt="">
+                                <img class="modal-work__photo work_image_1--modal" src="{% static 'main/images/mylang_test3.png' %}" alt="">
+                            </div>
+                            <div class="">
+                                <img class="modal-work__photo work_image_1--modal" src="{% static 'main/images/mylang_test4.png' %}" alt="">
                             </div>
                         </div>
 
@@ -431,21 +376,23 @@
                     <div class="modal-works__content">
 
                         <div class="modal-work__header">
-                            <h3 class="modal-work__title">Project title.</h3>
+                            <h3 class="modal-work__title">Мой ЯП</h3>
                             <div class="modal-work__info">
-                                category <span class="modal-work__info-divider">|</span> 2018
+                                Hard Programming <span class="modal-work__info-divider">|</span> 2022
                             </div>
                         </div>
 
                         <div class="modal-works__client">
-                            <div class="modal-works__client-title">Client:</div>
-                            <div class="modal-works__client-company">Creative Agency</div>
+                            <div class="modal-works__client-title">Цель:</div>
+                            <div class="modal-works__client-company">Создать свой язык программироваания.</div>
                         </div>
 
                         <div class="modal-work__text">
-                            <p>Как вы уже поняли меня зовут Виктор, и я программист. Карьера программиста заинтересовала меня ещё в школе, где с 9 класса я начал принимать активное участие во всяческого рода олимпиадах по программированию и информатике в целом.</p>
+                            <p>Первая моя подобная работа, где пришлось лезть в суть вещей. Пришлось изучить изрядное количество разного материала. Был потрачен не один день и не одна ночь, но результат меня радует.</p>
 
-                            <p>Карьера программиста заинтересовала меня ещё в школе, где с 9 класса я начал принимать активное участие во всяческого рода олимпиадах по программированию и информатике в целом.</p>
+                            <p>Основные моменты касаемо разработки и всех сложностей которые возниали у меня в процессе разработки я постараюсь раскрыть в своём блоге. Но стоит сказать что этот проект дал огромное понимание более глубоих вещей, и поднял меня на совершено иной уровень разработки.</p>
+
+                            <p>Ссылка на исходный код:  <a href="https://github.com/LinWis/myProgLang"  target="_blank" class="work_links">GitHub</a></p>
                         </div>
 
                         <div class="modal-work__footer">
@@ -456,6 +403,7 @@
                     </div>
 
                 </div>
+
         </div>
     </div>
 
@@ -542,38 +490,29 @@
                         <h4 class="timeline__title">ОПЫТ</h4>
 
                         <div class="timeline__item">
-                            <time class="timeline__date" datetime="11-10-2017">2017 - <b>Present</b></time>
-                            <h5 class="timeline__subtitle">Freelancer</h5>
-                            <div class="timeline__position">Art Director</div>
+                            <time class="timeline__date" datetime="11-10-2017">2019 - 2021</b></time>
+                            <h5 class="timeline__subtitle">Олимпиадник</h5>
+                            <div class="timeline__position">Спортивное программирование</div>
                             <div class="timeline__text">
-                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam lobortis felis non tempor ullamcorper. Pellentesque cursus lectus a pulvinar dapibus. Nullam blandit aliquam ligula ut condimentum.</p>
+                                <p>Во время обучения в школе я много времени посвящал спортивному программированию. В целом получалось неплохо, но могло бы и лучше.</p>
                             </div>
                         </div>
 
                         <div class="timeline__item">
-                            <time class="timeline__date" datetime="11-10-2017">2017 - <b>Present</b></time>
-                            <h5 class="timeline__subtitle">Freelancer</h5>
-                            <div class="timeline__position">Art Director</div>
+                            <time class="timeline__date" datetime="11-10-2017">2021<b></b></time>
+                            <h5 class="timeline__subtitle">Репетитор</h5>
+                            <div class="timeline__position"></div>
                             <div class="timeline__text">
-                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam lobortis felis non tempor ullamcorper. Pellentesque cursus lectus a pulvinar dapibus. Nullam blandit aliquam ligula ut condimentum.</p>
+                                <p>C момента поступления в вуз стал проводить уроки по программированию и подготовке к экзаменам. Занимаюсь подготовкой к собеседованиям, повышением успеваемости в школах и вузах и многое другое.</p>
                             </div>
                         </div>
 
                         <div class="timeline__item">
-                            <time class="timeline__date" datetime="11-10-2017">2017 - <b>Present</b></time>
-                            <h5 class="timeline__subtitle">Freelancer</h5>
-                            <div class="timeline__position">Art Director</div>
+                            <time class="timeline__date" datetime="11-10-2017">2022 - <b>Present</b></time>
+                            <h5 class="timeline__subtitle">Фриланс</h5>
+                            <div class="timeline__position">Веб программист</div>
                             <div class="timeline__text">
-                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam lobortis felis non tempor ullamcorper. Pellentesque cursus lectus a pulvinar dapibus. Nullam blandit aliquam ligula ut condimentum.</p>
-                            </div>
-                        </div>
-
-                        <div class="timeline__item">
-                            <time class="timeline__date" datetime="11-10-2017">2017 - <b>Present</b></time>
-                            <h5 class="timeline__subtitle">Freelancer</h5>
-                            <div class="timeline__position">Art Director</div>
-                            <div class="timeline__text">
-                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam lobortis felis non tempor ullamcorper. Pellentesque cursus lectus a pulvinar dapibus. Nullam blandit aliquam ligula ut condimentum.</p>
+                                <p>В свободное от учёбы время нередко беру разного рода заказы с зарубежных фрилансов. Сами задачи беру любые какие попадутся, но чаще всего на веб программирование.</p>
                             </div>
                         </div>
 
@@ -583,16 +522,16 @@
                         <h4 class="timeline__title">ОБРАЗОВАНИЕ</h4>
 
                         <div class="timeline__item">
-                            <time class="timeline__date" datetime="11-10-2017">2005 - 2010</time>
-                            <h5 class="timeline__subtitle">UI/UX Design</h5>
-                            <div class="timeline__position">LA University, USA</div>
+                            <time class="timeline__date" datetime="11-10-2017">~2021</time>
+                            <h5 class="timeline__subtitle">ФизМат класс</h5>
+                            <div class="timeline__position"></div>
 
                         </div>
 
                         <div class="timeline__item">
-                            <time class="timeline__date" datetime="11-10-2017">2005 - 2010</time>
-                            <h5 class="timeline__subtitle">UI/UX Design</h5>
-                            <div class="timeline__position">LA University, USA</div>
+                            <time class="timeline__date" datetime="11-10-2017">2021</time>
+                            <h5 class="timeline__subtitle">Прикладная математика</h5>
+                            <div class="timeline__position">Московский автомобильно-дорожный институт</div>
 
                         </div>
 
@@ -607,7 +546,7 @@
 
                                 <div class="progress-bar__right">
                                     <div class="progress-bar__bar">
-                                        <div class="progress-bar__progress" style="width: 90%"></div>
+                                        <div class="progress-bar__progress" style="width: 80%"></div>
                                     </div>
                                 </div>
 
@@ -616,7 +555,49 @@
                             <div class="progress-bar__item">
 
                                 <div class="progress-bar__left">
-                                    <div class="progress-bar__title">UI/UX Design</div>
+                                    <div class="progress-bar__title">C/C++</div>
+                                </div>
+
+                                <div class="progress-bar__right">
+                                    <div class="progress-bar__bar">
+                                        <div class="progress-bar__progress" style="width: 60%"></div>
+                                    </div>
+                                </div>
+
+                            </div>
+
+                            <div class="progress-bar__item">
+
+                                <div class="progress-bar__left">
+                                    <div class="progress-bar__title">Java/Kotlin</div>
+                                </div>
+
+                                <div class="progress-bar__right">
+                                    <div class="progress-bar__bar">
+                                        <div class="progress-bar__progress" style="width: 25%"></div>
+                                    </div>
+                                </div>
+
+                            </div>
+
+                            <div class="progress-bar__item">
+
+                                <div class="progress-bar__left">
+                                    <div class="progress-bar__title">Php</div>
+                                </div>
+
+                                <div class="progress-bar__right">
+                                    <div class="progress-bar__bar">
+                                        <div class="progress-bar__progress" style="width: 30%"></div>
+                                    </div>
+                                </div>
+
+                            </div>
+
+                            <div class="progress-bar__item">
+
+                                <div class="progress-bar__left">
+                                    <div class="progress-bar__title">Ассемблер</div>
                                 </div>
 
                                 <div class="progress-bar__right">
@@ -630,26 +611,12 @@
                             <div class="progress-bar__item">
 
                                 <div class="progress-bar__left">
-                                    <div class="progress-bar__title">UI/UX Design</div>
+                                    <div class="progress-bar__title">Html, Css, Js</div>
                                 </div>
 
                                 <div class="progress-bar__right">
                                     <div class="progress-bar__bar">
-                                        <div class="progress-bar__progress" style="width: 50%"></div>
-                                    </div>
-                                </div>
-
-                            </div>
-
-                            <div class="progress-bar__item">
-
-                                <div class="progress-bar__left">
-                                    <div class="progress-bar__title">UI/UX Design</div>
-                                </div>
-
-                                <div class="progress-bar__right">
-                                    <div class="progress-bar__bar">
-                                        <div class="progress-bar__progress" style="width: 30%"></div>
+                                        <div class="progress-bar__progress" style="width: 45%"></div>
                                     </div>
                                 </div>
 
@@ -661,22 +628,22 @@
 
 
                         <div class="timeline__item">
-                            <time class="timeline__date" datetime="11-10-2017">2017</time>
-                            <h5 class="timeline__subtitle">Freelancer</h5>
-                            <div class="timeline__position">Art Director</div>
+                            <time class="timeline__date" datetime="11-10-2017">2020</time>
+                            <h5 class="timeline__subtitle">Олимпиады</h5>
+                            <div class="timeline__position">Спортивное программирование</div>
                             <div class="timeline__text">
-                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam lobortis felis non tempor ullamcorper. Pellentesque cursus lectus a pulvinar dapibus. Nullam blandit aliquam ligula ut condimentum.</p>
+                                <p>Победа на областном этапе Всероссийской олимпиады школьников.</p>
                             </div>
                         </div>
 
-                        <div class="timeline__item">
+                        <!--<div class="timeline__item">
                             <time class="timeline__date" datetime="11-10-2017">2017</time>
                             <h5 class="timeline__subtitle">Freelancer</h5>
                             <div class="timeline__position">Art Director</div>
                             <div class="timeline__text">
                                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam lobortis felis non tempor ullamcorper. Pellentesque cursus lectus a pulvinar dapibus. Nullam blandit aliquam ligula ut condimentum.</p>
                             </div>
-                        </div>
+                        </div>-->
 
 
                     </div>
@@ -684,7 +651,7 @@
                 </div>
 
                 <div class="text-center">
-                    <a class="btn" href="#">HIRE ME</a>
+                    <a class="btn" href="#" data-modal="#modal_hire_me">HIRE ME</a>
                 </div>
 
             </div>
@@ -702,17 +669,17 @@
 
             <div class="contact">
                 <div class="contact__left">
-                    <h3 class="modal__title mb-0">LET'S TALK!</h3>
-                    <h4 class="modal__subtitle">CALL ME OR SEND ME A REQUEST</h4>
+                    <h3 class="modal__title mb-0">ПОГОВОРИМ?</h3>
+                    <h4 class="modal__subtitle">ПОЗВОНИ МНЕ ИЛИ ЖЕ НАПИШИ НА ПОЧТУ</h4>
 
                     <ul class="contact__info">
                         <li class="contact__info-item">
                             <img class="contact__info-icon" src="{% static 'main/images/phone.svg' %}" alt="" style="width: 13px">
-                            (200) 100 3000
+                            8 938 355-15-69
                         </li>
                         <li class="contact__info-item">
                             <img class="contact__info-icon" src="{% static 'main/images/mail.svg' %}" alt="" style="width: 13px">
-                            designer@ui43.com
+                            turbinvr1@gmail.com
                         </li>
                     </ul>
 
@@ -731,7 +698,9 @@
                     </form>
                     
                 </div>
-                <div class="contact__right"></div>
+                <div class="contact__right">
+                    <img src="{% static 'main/images/hireme_img.jpg' %}">
+                </div>
             </div>
 
         </div>

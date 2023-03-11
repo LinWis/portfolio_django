@@ -4,6 +4,10 @@
 
 .about {
   margin: 8.4rem 0;
+
+  @media @mobile {
+    margin: 4rem 0;
+  }
 }
 
 .about__inner {
@@ -19,12 +23,26 @@
   width: 50%;
   padding-left: 3.2rem;
   margin-top: 2rem;
+  @media @tablet {
+    width: 100%;
+    padding-left: 0;
+    text-align: center;
+    margin-top: 0;
+  }
 }
 
 .about__title {
   font-size: 3rem;
   font-weight: 700;
   color: @black;
+  @media @notebook {
+    font-size: 2.5rem;
+  }
+
+  @media @mobile {
+    font-size: 2rem;
+
+  }
 }
 
 .about__bigtitle {
@@ -36,6 +54,18 @@
 
   position: relative;
   left: -10px;
+
+  @media @notebook {
+    font-size: 4rem;
+  }
+
+  @media @tablet {
+    position: static;
+  }
+
+  @media @mobile {
+    font-size: 3rem;
+  }
 }
 
 .about__text {
@@ -51,9 +81,19 @@
   border-radius: 30%;
   background-color: rgba(@grey, .1);
   padding: 7em 4.5rem;
+  z-index: 1000;
 
   img {
-    width: 430px;
-    height: 400px;
+    width: 450px;
+    height: 500px;
+    margin-left: -10px;
+    border-radius: 30%;
+    background-color: rgba(0, 0, 0, 0.1);
+  }
+
+
+
+  @media @tablet {
+    display: none;
   }
 }
